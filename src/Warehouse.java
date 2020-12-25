@@ -39,13 +39,13 @@ public class Warehouse extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		PrintWriter out = response.getWriter();
+		
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         
 		try {
 
-
-            Connection con = DatabaseConnection.initializeDB();
+			Connection con = DatabaseConnection.initializeDB();
 			
 			//JSON to java object using gson
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -94,9 +94,10 @@ public class Warehouse extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		PrintWriter out = response.getWriter();
-
+		
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
+
         
 		try {
 
@@ -136,5 +137,16 @@ public class Warehouse extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+	/*
+	 <filter>
+   		<filter-name>CorsFilter</filter-name>
+    	<filter-class>CORSFilter</filter-class>
+	</filter>
+	 
+	<filter-mapping>
+	    <filter-name>CorsFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>	 
+	 */
 
 }
