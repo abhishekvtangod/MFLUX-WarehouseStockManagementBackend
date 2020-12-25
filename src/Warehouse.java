@@ -137,16 +137,5 @@ public class Warehouse extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-	/*
-	 <filter>
-   		<filter-name>CorsFilter</filter-name>
-    	<filter-class>CORSFilter</filter-class>
-	</filter>
-	 
-	<filter-mapping>
-	    <filter-name>CorsFilter</filter-name>
-	    <url-pattern>/*</url-pattern>
-	</filter-mapping>	 
-	 */
 
 }
