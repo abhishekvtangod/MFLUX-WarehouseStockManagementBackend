@@ -1,10 +1,11 @@
 
 
 import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -47,6 +48,7 @@ public class UpdateData extends HttpServlet {
 //		doGet(request, response);
 		PrintWriter out = response.getWriter();
 
+
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -62,20 +64,20 @@ public class UpdateData extends HttpServlet {
 			
 			System.out.println(whObj);
 			Statement st = con.createStatement();
-			String query = "update " + tableName + " set " + xyz + " where (" + abc + " )";
 			
-			
+			String query = whObj.get_query();
+			System.out.println(query);
             st.executeUpdate(query);
             con.close();
             
-			out.print("{ \"Result\": \"Updated successfully\" }");
+			out.print("{ \"Result\": \"Query Processed successfully\" }");
 
             out.flush();
             
             
 		}catch(Exception e) {
 
-			out.print("{ \"Result\": \"Update failed\" }");
+			out.print("{ \"Result\": \"Query failed\" }");
 			e.printStackTrace();
 		}
 
