@@ -11,6 +11,8 @@ public class GoodsEntity {
 	private int consumer;
 	private String goods_name;
 	private String category;
+	private int wid;
+	private int bin;
 	
 	//get
 	public int get_goods_id () {
@@ -46,7 +48,12 @@ public class GoodsEntity {
 	public String get_category () {
 		return category;
 	}
-	
+	public int get_wid() {
+		return wid;
+	}
+	public int get_bin() {
+		return bin;
+	}
 	//set
 	public void set_goods_id (int goods_id) {
 		this.goods_id = goods_id;
@@ -81,10 +88,16 @@ public class GoodsEntity {
 	public void set_category (String category) {
 		this.category = category;
 	}
+	public void set_wid(int wid) {
+		this.wid = wid;
+	}
+	public void set_bin(int bin) {
+		this.bin = bin;
+	}
 	
 	
 	
 	public String toString() {
-		return "GoodsEntity["+ goods_id + " " + goods_name + " " + is_sensitive + " " + storage + " " + weight + " " + cost   + " " + category + " " + arrival + " " + supplier + " " + departure + " " + consumer + "]";
+		return "GoodsEntity["+ goods_id + " " + goods_name + " " + is_sensitive + " " + storage + " " + weight + " " + cost   + " " + category + " " + arrival + " " + supplier + " " + departure + " " + consumer + " " + wid + " " + bin + "]";
 	}
 }

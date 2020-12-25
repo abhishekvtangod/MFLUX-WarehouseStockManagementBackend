@@ -39,6 +39,7 @@ public class Warehouse extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		PrintWriter out = response.getWriter();
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -57,17 +58,17 @@ public class Warehouse extends HttpServlet {
 				WarehouseEntity wh = new WarehouseEntity();
 			    wh.set_Wid(rs.getInt(1));
 			    wh.set_is_functional(rs.getInt(2));
-			    wh.set_capacity(rs.getInt(3));
-			    wh.set_company(rs.getString(4));
-			    wh.set_address(rs.getString(5));
-			    wh.set_latitude(rs.getString(6));
-			    wh.set_longitude(rs.getString(7));
-//			    we.set_supervisor_id(rs.getInt(8));
+//			    wh.set_capacity(rs.getInt(3));
+			    wh.set_company(rs.getString(3));
+			    wh.set_address(rs.getString(4));
+//			    wh.set_latitude(rs.getString(6));
+//			    wh.set_longitude(rs.getString(7));
+			    wh.set_supervisor_id(rs.getInt(5));
 			    String jsonString = gson.toJson(wh);
 			    whArr.add(jsonString);
 			    
 			}
-			String fin = "{"+whArr+"}";
+			String fin = "{ \"data\" : "+whArr+"}";
 
 			out.print(fin);
 			con.close();
@@ -93,6 +94,7 @@ public class Warehouse extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		PrintWriter out = response.getWriter();
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -107,16 +109,16 @@ public class Warehouse extends HttpServlet {
 			WarehouseEntity whObj = gson.fromJson(reader, WarehouseEntity.class); 
 			
 			System.out.println(whObj);
-			PreparedStatement st = con.prepareStatement("insert into Warehouse (`Wid`, `is_functional`, `capacity`, `company`, `address`, `latitude`, `longitude`)  "
-					+ "values (?, ?, ?, ?, ?, ?, ?)");
+			PreparedStatement st = con.prepareStatement("insert into Warehouse (`Wid`, `is_functional`, `company`, `address`)  "
+					+ "values (?, ?, ?, ?)");
 			
 			st.setInt(1, whObj.get_Wid());
 			st.setInt(2, whObj.get_is_functional());
-			st.setInt(3, whObj.get_capacity());
-			st.setString(4, whObj.get_company());
-            st.setString(5, whObj.get_address());
-            st.setString(6, whObj.get_latitude());
-            st.setString(7, whObj.get_longitude());
+//			st.setInt(3, whObj.get_capacity());
+			st.setString(3, whObj.get_company());
+            st.setString(4, whObj.get_address());
+//            st.setString(6, whObj.get_latitude());
+//            st.setString(7, whObj.get_longitude());
 //            st.setInt(8, whObj.get_supervisor_id());
            
             st.executeUpdate();

@@ -39,6 +39,7 @@ public class Goods extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -67,7 +68,8 @@ public class Goods extends HttpServlet {
 			    ve.set_supplier(rs.getInt(9));
 			    ve.set_departure(rs.getInt(10));
 			    ve.set_consumer(rs.getInt(11));
-			    
+			    ve.set_wid(rs.getInt(12));
+			    ve.set_bin(rs.getInt(13));
 			    
 			    
 				
@@ -75,7 +77,7 @@ public class Goods extends HttpServlet {
 			    veArr.add(jsonString);
 			    
 			}
-			String fin = "{"+veArr+"}";
+			String fin = "{ \"data\" :"+veArr+"}";
 
 			out.print(fin);
 			con.close();
@@ -101,6 +103,7 @@ public class Goods extends HttpServlet {
 //		doGet(request, response);
 		
 		PrintWriter out = response.getWriter();
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -115,8 +118,8 @@ public class Goods extends HttpServlet {
 	        GoodsEntity whObj = gson.fromJson(reader, GoodsEntity.class); 
 			
 			System.out.println(whObj);
-			PreparedStatement st = con.prepareStatement("insert into Goods (`goods_id`, `goods_name`, `is_sensitive`, `storage`,`weight`, `cost`,  `category`, `arrival`, `Supplier`)  "
-					+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+			PreparedStatement st = con.prepareStatement("insert into Goods (`goods_id`, `goods_name`, `is_sensitive`, `storage`,`weight`, `cost`,  `category`, `arrival`, `Supplier`, `wid`, `bin`)  "
+					+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 	
 			st.setInt(1, whObj.get_goods_id());
 			st.setString(2, whObj.get_goods_name());
@@ -127,9 +130,13 @@ public class Goods extends HttpServlet {
             st.setString(7, whObj.get_category());
             st.setInt(8, whObj.get_arrival());
             st.setInt(9, whObj.get_supplier());
+
 //            st.setInt(10, whObj.get_departure());
 //            st.setInt(11, whObj.get_consumer());
-           
+//            
+            st.setInt(10, whObj.get_wid());
+            st.setInt(11, whObj.get_bin());
+            
             
             st.executeUpdate();
             con.close();
