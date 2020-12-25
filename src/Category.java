@@ -40,7 +40,7 @@ public class Category extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		PrintWriter out = response.getWriter();
-		response.addHeader("Access-Control-Allow-Origin", "*");
+
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
@@ -91,7 +91,7 @@ public class Category extends HttpServlet {
 		// TODO Auto-generated method stub
 //		doGet(request, response);
 		PrintWriter out = response.getWriter();
-		response.addHeader("Access-Control-Allow-Origin", "*");
+
 		response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
 		try {
