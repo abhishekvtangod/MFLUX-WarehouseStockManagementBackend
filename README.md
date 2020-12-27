@@ -81,11 +81,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
+    None
 
 
 
@@ -133,12 +129,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+    None
 
 
 
@@ -186,12 +177,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+	None
 
 
 
@@ -239,12 +225,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+    None
 
 
 
@@ -280,12 +261,12 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-	{
+	[{
 	   "supplier_id":1,
 	   "supplier_name":"abhi",
 	   "phone":"54645",
 	   "email": "abhi"
-	}
+	}]
 
 
   ``` 
@@ -293,12 +274,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+	None
 
 
 
@@ -332,7 +308,7 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-	{
+	[{
 	 "goods_id": 3,
 	 "is_sensitive": 1,
 	 "storage": 14,
@@ -346,7 +322,7 @@
 	 "category": "Other",
 	 "wid": 5,
 	 "bin":1
-	}
+	}]
  
 
   ``` 
@@ -354,13 +330,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
-
+    None
 
 
 
@@ -389,21 +359,16 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-	{
+	[{
 	 "category_name": "abhi"
-	}
+	}]
 
   ``` 
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+    None
 
 
 --------------------
@@ -446,11 +411,8 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
+    None
+
 
 **Show Employees**
 ----
@@ -489,13 +451,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
-
+    None
 
 
 
@@ -541,12 +497,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+	None
 
 
 
@@ -592,13 +543,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
-
+    None
 
 
 
@@ -645,12 +590,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+    None
 
 
 
@@ -698,12 +638,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
+    None
 
 
 
@@ -749,13 +684,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
-
-
+	None
 
 
 
@@ -796,11 +725,7 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
+	None
 
 
 --------------------
