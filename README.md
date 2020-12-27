@@ -1,10 +1,10 @@
 # WarehouseStockManagementBackend
-### Database Systems Project Sem 5
+
 ## API endpoints:
 
-**Show Employees**
+**Show Warehouses**
 ----
-  Returns json data of all Employees.
+  Returns json data of all Warehouses.
 
 * **URL**
 
@@ -25,21 +25,22 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ Result : inserted successfully }`
- 
-* **Error Response:**
-
-  * **Code:** 404  <br />
-    **Content:** `{ Result : Insertion failed }`
-
-* **Sample Call :**
-
+    **Content:** 
   ```json
   {
     "Wid" : 1682,
     "is_functional" : 1,
-    "company":"abhi", 
-    "address":"abhi",
+    "company":"NearoAI", 
+    "address":"MSRIT Bangalore",
     "supervisor_id" : 11
   }
-  ```
+  ``` 
+* **Error Response:**
+
+  * **Code:** 404  <br />
+    **Content:** 
+    ```json
+    { 
+    	"Result" : "Getting info from DB failed" 
+    }
+    ```
