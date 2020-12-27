@@ -267,9 +267,8 @@
 	   "phone":"54645",
 	   "email": "abhi"
 	}]
-
-
   ``` 
+  
 * **Error Response:**
 
   * **Code:** 404  <br />
