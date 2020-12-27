@@ -16,7 +16,7 @@
   
 *  **URL Params**
 
-None
+    None
 
 * **Data Params**
 
@@ -25,17 +25,12 @@ None
 * **Success Response:**
 
   * **Code:** 200 <br />
-    **Content:** `{ id : 12, name : "Michael Bloom" }`
+    **Content:** `{ Result : inserted successfully }`
  
 * **Error Response:**
 
-  * **Code:** 404 NOT FOUND <br />
-    **Content:** `{ error : "User doesn't exist" }`
-
-  OR
-
-  * **Code:** 401 UNAUTHORIZED <br />
-    **Content:** `{ error : "You are unauthorized to make this request." }`
+  * **Code:** 404  <br />
+    **Content:** `{ Result : Insertion failed }`
 
 * **Sample Call :**
 
