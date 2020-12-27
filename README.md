@@ -40,11 +40,8 @@
 
   * **Code:** 404  <br />
     **Content:** 
-    ```json
-    { 
-    	"Result" : "Getting info from DB failed" 
-    }
-    ```
+    None
+
 
 **Show Employees**
 ----
