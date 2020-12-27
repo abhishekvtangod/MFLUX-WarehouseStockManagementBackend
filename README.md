@@ -2,6 +2,7 @@
 
 ## API endpoints:
 
+
 **Show Warehouses**
 ----
   Returns json data of all Warehouses.
@@ -27,13 +28,13 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
+  [{
     "Wid" : 1682,
     "is_functional" : 1,
     "company":"NearoAI", 
     "address":"MSRIT Bangalore",
     "supervisor_id" : 11
-  }
+  }]
   ``` 
 * **Error Response:**
 
@@ -70,13 +71,14 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	[{
+	   "empid":72,
+	   "emp_name":"abhi",
+	   "emp_shift":"M",
+	   "emp_sal": 9000,
+	   "wid": 5
+	}]
+
   ``` 
 * **Error Response:**
 
@@ -122,13 +124,13 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	[{
+	   "in_wh":5,
+	   "reg_num":"abhi",
+	   "model":"abhi",
+	   "type": "abhi",
+	   "last_maintainence": "2020-05-09"
+	}]
   ``` 
 * **Error Response:**
 
@@ -173,13 +175,15 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	[{
+	   "logistics_id":1,
+	   "start_addr":"abhi",
+	   "end_addr":"abhi",
+	   "dispatch_datetime": "2020-12-16 18:00:01",
+	   "receive_datetime": "2020-12-16 18:00:01",
+	   "vehicle": "vinod"
+	}]
+
   ``` 
 * **Error Response:**
 
@@ -226,13 +230,13 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+  [{
+   "consumer_id":1,
+   "consumer_name":"abhi",
+   "phone":"54645",
+   "email": "abhi"
+  }]
+
   ``` 
 * **Error Response:**
 
@@ -279,13 +283,14 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	{
+	   "supplier_id":1,
+	   "supplier_name":"abhi",
+	   "phone":"54645",
+	   "email": "abhi"
+	}
+
+
   ``` 
 * **Error Response:**
 
@@ -330,13 +335,23 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	{
+	 "goods_id": 3,
+	 "is_sensitive": 1,
+	 "storage": 14,
+	 "weight": 200,
+	 "cost": 2990,
+	 "arrival": 5,
+	 "supplier":6,
+	 "departure": 122,
+	 "consumer": 0,
+	 "goods_name": "abhi",
+	 "category": "Other",
+	 "wid": 5,
+	 "bin":1
+	}
+ 
+
   ``` 
 * **Error Response:**
 
@@ -377,13 +392,10 @@
   * **Code:** 200 <br />
     **Content:** 
   ```json
-  {
-    "Wid" : 1682,
-    "is_functional" : 1,
-    "company":"NearoAI", 
-    "address":"MSRIT Bangalore",
-    "supervisor_id" : 11
-  }
+	{
+	 "category_name": "abhi"
+	}
+
   ``` 
 * **Error Response:**
 
@@ -397,7 +409,7 @@
 
 
 
--------------------------------------------------------
+--------------------
 
 
 **Show Warehouses**
@@ -795,7 +807,6 @@
 
 
 --------------------
-
 
 
 **Update Database Data**
