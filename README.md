@@ -374,9 +374,9 @@
 --------------------
 
 
-**Show Warehouses**
+**Insert Warehouses**
 ----
-  Returns json data of all Warehouses.
+  Inserts data of a particular new Warehouse into Warehouse table in the database.
 
 * **URL**
 
@@ -384,7 +384,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -392,12 +392,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -407,16 +401,37 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    None
+    	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
-**Show Employees**
+
+
+**Insert Employees**
 ----
-  Returns json data of all Employees.
+  Inserts data of a particular new Employee into Employee table in the database.
 
 * **URL**
 
@@ -424,7 +439,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -432,12 +447,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -447,11 +456,32 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    None
+    	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
@@ -460,9 +490,11 @@
 
 
 
-**Show Vehicles**
+
+
+**Insert Vehicles**
 ----
-  Returns json data of all Vehicles.
+  Inserts data of a particular new Vehicle into Vehicles table in the database.
 
 * **URL**
 
@@ -470,7 +502,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -478,12 +510,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -493,11 +519,31 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-	None
+		
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
@@ -506,9 +552,12 @@
 
 
 
-**Show Logistics**
+
+
+**Insert Logistics**
 ----
-  Returns json data of all Logistics.
+  Inserts data of a particular new Logistics into Logistics table in the database.
+
 
 * **URL**
 
@@ -516,7 +565,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -524,12 +573,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -539,11 +582,32 @@
     "supervisor_id" : 11
   }
   ``` 
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    None
+    	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
@@ -553,9 +617,11 @@
 
 
 
-**Show Consumers**
+
+
+**Insert Consumers**
 ----
-  Returns json data of all Consumers.
+  Inserts data of a particular new Consumer into Consumer table in the database.
 
 * **URL**
 
@@ -563,7 +629,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -571,12 +637,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -586,11 +646,31 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    None
+    	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
@@ -601,9 +681,11 @@
 
 
 
-**Show Suppliers**
+
+
+**Insert Suppliers**
 ----
-  Returns json data of all Suppliers.
+  Inserts data of a particular new Supplier into Supplier table in the database.
 
 * **URL**
 
@@ -611,7 +693,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -619,12 +701,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -634,11 +710,31 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-    None
+    	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
@@ -647,9 +743,11 @@
 
 
 
-**Show Goods**
+
+
+**Insert Goods**
 ----
-  Returns json data of all Goods.
+  Inserts data of a particular new Goods into Goods table in the database.
 
 * **URL**
 
@@ -657,7 +755,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -665,12 +763,6 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
   ```json
   {
     "Wid" : 1682,
@@ -680,17 +772,40 @@
     "supervisor_id" : 11
   }
   ``` 
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-	None
+		
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
 
 
 
-**Show Category**
+
+
+**Insert Category**
 ----
-  Returns json data of all Goods.
+  Inserts data of a particular new Category into Category table in the database.
+
 
 * **URL**
 
@@ -698,7 +813,7 @@
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
@@ -706,13 +821,7 @@
 
 * **Data Params**
 
-  None
-
-* **Success Response:**
-
-  * **Code:** 200 <br />
-    **Content:** 
-  ```json
+```json
   {
     "Wid" : 1682,
     "is_functional" : 1,
@@ -721,11 +830,32 @@
     "supervisor_id" : 11
   }
   ``` 
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+
+  ```json
+	{ 
+		"Result": "inserted successfully" 
+	}
+
+  ``` 
+
+
 * **Error Response:**
 
   * **Code:** 404  <br />
     **Content:** 
-	None
+	
+  ```json
+	{ 
+		"Result": "Insertion failed" 
+	}
+
+  ``` 
+
+
 
 
 --------------------
@@ -733,7 +863,7 @@
 
 **Update Database Data**
 ----
-  Returns json data of all Goods.
+  Updates data of a particular table in the database.
 
 * **URL**
 
