@@ -1,3 +1,6 @@
+Frontend:
+https://github.com/prajwalsfs1721/Databse-Project-Frontend
+
 # WarehouseStockManagementBackend
 
 ## API endpoints:
